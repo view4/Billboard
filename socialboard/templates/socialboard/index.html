@@ -40,12 +40,16 @@
 
         </div>
         <div class="main" id="main-bill-container">
+            {% if user.is_authenticated %}
             <form method='post' action="/socialboard/create/" class="create-post">
                 {% csrf_token %}
                 <input type="text" name="title" placeholder="title" />
                 <textarea name="content" placeholder="write your post here"></textarea>
                 <input type="submit" value="post" />
             </form>
+            {% else %}
+            <h3>Please log or register to create/view posts</h3>
+            {% endif %}
         </div>
         <div class="column">
             {% if latest_posts %} {% for post in latest_posts %}

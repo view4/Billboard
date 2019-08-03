@@ -58,6 +58,9 @@ h3{
 
 .mini-bill{
     margin: 10px 10px 10px 0px;
+    border:1px solid gray;
+    padding:7px;
+    border-radius: 7px;
 }
 .create-post{
     width:60%;
